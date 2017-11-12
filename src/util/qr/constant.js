@@ -13,6 +13,11 @@ export const encodingModeValues = {
   ECI: '0111',
 };
 
+// 二维码各个版本所能承载的最大待编码字符串长度
+export const versionMaxmuim = {
+
+};
+
 // Character Count Indicator位数
 /**
 Numeric mode: 10 bits
