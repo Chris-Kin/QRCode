@@ -4,8 +4,6 @@
  */
 
 import {
-  // encodingModeValues,
-  // charCountBits,
   alphanumericValues,
 } from './constant';
 
