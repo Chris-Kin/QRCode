@@ -1,8 +1,9 @@
+/* eslint-disable */
 import {
   encodingModeValues,
   charCountBits,
   alphanumericValues,
-} from '../config/constant';
+} from './constant';
 
 // A模式字符转换为codewords函数
 const AEncodingFunc = (str) => {
@@ -35,7 +36,9 @@ const pad0 = (str, bit) => {
   let ans = str;
   const count = bit - str.length;
   for (let i = 0; i < count; i++) {
-    ans = '0' + ans;
+    ans = `0${ans}`;
   }
   return ans;
 }
+
+export default {};

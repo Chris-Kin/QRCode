@@ -11,7 +11,7 @@ export const encodingModeValues = {
   Byte: '0100',
   Kanji: '1000',
   ECI: '0111',
-}
+};
 
 // Character Count Indicator位数
 /**
@@ -21,31 +21,33 @@ Byte mode: 8 bits
 Japanese mode: 8 bits
  */
 export const charCountBits = (version) => {
-  if (1 <= version <= 9) {
+  if (version >= 1 && version <= 9) {
     return {
       N: 10,
       A: 9,
       B: 8,
-      J: 8
-    }
-  } else if (10 <= version <= 26) {
+      J: 8,
+    };
+  } else if (version >= 10 && version <= 26) {
     return {
       N: 12,
       A: 11,
       B: 16,
-      J: 10
-    }
-  } else if (27 <= version <= 40) {
+      J: 10,
+    };
+  } else if (version >= 27 && version <= 40) {
     return {
       N: 14,
       A: 13,
       B: 16,
-      J: 12
-    }
+      J: 12,
+    };
   }
-}
+  return '';
+};
 
 // 字母模式各个字符值
+/* eslint-disable */
 export const alphanumericValues = {
   '0': 0,
   '1': 1,
@@ -91,5 +93,6 @@ export const alphanumericValues = {
   '-': 41,
   '.': 42,
   '/': 43,
-  ':': 44
-}
+  ':': 44,
+};
+/* eslint-enable */
